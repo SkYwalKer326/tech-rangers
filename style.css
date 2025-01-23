@@ -1,0 +1,141 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4; /* Light gray background */
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex; /* Use flexbox for easy layout */
+    justify-content: space-between; /* Space logo and navigation evenly */
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc; /* Add a subtle border below the header */
+    background-color: #333; /* Set header background to black */
+    color: #fff; /* Set header text color to white */
+}
+
+.logo img {
+    width: 150px;
+    align-items: left;
+}
+
+    
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 20px;
+    text-align: right;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fbf7f7f4; /* Set header link color to white */
+}
+
+.get-started {
+    background-color: #009688; /* Teal color */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+main {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #333; /* Dark gray for better contrast */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #666; /* Gray for readability */
+}
+
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #007bff; /* Blue */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 10px;
+}
+
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    transition: transform 0.2s ease; /* Add hover effect */
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+}
+
+.card img {
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333; /* Dark gray for better contrast */
+}
+
+.card p {
+    font-size: 14px;
+    color: #666; /* Gray for readability */
+}
+
+footer {
+    background-color: #333; /* Set footer background to black */
+    padding: 20px 0;
+    text-align: center;
+    color: #fff; /* Set footer text color to white */
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+footer a {
+    color: #fff; /* Set footer link color to white */
+    text-decoration: none;
+}
