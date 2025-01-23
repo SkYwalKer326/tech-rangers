@@ -1,128 +1,144 @@
-body {
-    font-family: sans-serif;
+/* Reset some default styles */
+* {
     margin: 0;
-    background-color: #f4f4f4; /* Light gray background */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header styles */
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 20px 0;
 }
 
 .container {
-    max-width: 960px;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
-}
-
-header {
-    display: flex; /* Use flexbox for easy layout */
-    justify-content: space-between; /* Space logo and navigation evenly */
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
-    border-bottom: 1px solid #ccc; /* Add a subtle border below the header */
-    background-color: #333; /* Set header background to black */
-    color: #fff; /* Set header text color to white */
 }
 
 .logo img {
-    width: 150px;
-    align-items: left;
+    height: 50px; /* Adjust logo size */
 }
-
-    
 
 nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
 }
 
-nav li {
+nav ul li {
     margin-left: 20px;
-    text-align: right;
 }
 
-nav a {
-    text-decoration: none;
-    color: #fbf7f7f4; /* Set header link color to white */
-}
-
-.get-started {
-    background-color: #009688; /* Teal color */
+nav ul li a {
     color: #fff;
-    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a.get-started {
+    background: #28a745;
+    padding: 10px 15px;
     border-radius: 5px;
 }
 
-main {
+/* Hero section styles */
+.hero {
     text-align: center;
-    padding: 80px 0;
+    padding: 50px 0;
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: #333; /* Dark gray for better contrast */
+    font-size: 2.5em;
+    margin-bottom: 10px;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    color: #666; /* Gray for readability */
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    margin-top: 20px;
 }
 
 .button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #007bff; /* Blue */
+    background: #007bff;
     color: #fff;
+    padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
-    margin: 0 10px;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background: #0056b3;
+}
+
+/* Features section styles */
+#features {
+    padding: 40px 0;
+    background: #fff;
+}
+
+#features h2 {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 .feature-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     padding: 20px;
+    margin: 10px;
+    width: calc(25% - 40px); /* Adjust width for 4 cards */
     text-align: center;
-    align-items: center;
-    transition: transform 0.2s ease; /* Add hover effect */
-}
-
-.card:hover {
-    transform: translateY(-5px); 
+    transition: transform 0.3s;
 }
 
 .card img {
-    width: 50px;
+    max-width: 100%;
+    height: auto;
     margin-bottom: 15px;
 }
 
 .card h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #333; /* Dark gray for better contrast */
+    margin: 10px 0;
 }
 
 .card p {
-    font-size: 14px;
-    color: #666; /* Gray for readability */
+    font-size: 0.9em;
 }
 
+/* Card hover effect */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Footer styles */
 footer {
-    background-color: #333; /* Set footer background to black */
-    padding: 20px 0;
+    background: #007bff;
+    color: #fff;
     text-align: center;
-    color: #fff; /* Set footer text color to white */
-}
-
-footer p {
-    margin-bottom: 10px;
+    padding: 20px 0;
 }
 
 footer ul {
@@ -130,12 +146,24 @@ footer ul {
     padding: 0;
 }
 
-footer li {
-    display: inline-block;
-    margin-right: 15px;
+footer ul li {
+    display: inline;
+    margin: 0 10px;
 }
 
-footer a {
-    color: #fff; /* Set footer link color to white */
+footer ul li a {
+    color: #fff;
     text-decoration: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .feature-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Full width on smaller screens */
+    }
 }
